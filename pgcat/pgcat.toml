@@ -1,0 +1,19 @@
+[general]
+enable_prometheus_exporter = true
+prometheus_exporter_port = 9930
+port = 6432
+admin_username = "admin"
+admin_password = "password"
+
+[pools.db]
+
+[pools.db.users.0]
+pool_size = 5
+username = "user"
+password = "password"
+
+[pools.db.shards.0]
+database = "example"
+servers = [
+    ["postgres", 5432, "primary"],
+]
